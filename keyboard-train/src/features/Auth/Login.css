@@ -1,0 +1,37 @@
+.authentication{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.authentication-card{
+	max-width: 400px;
+	width: 100%;
+	border: 1px solid grey;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	padding: 10px;
+}
+
+.btns-group{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.btn{
+	background-color: tomato;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 7px;
+	color: white;
+	cursor: pointer;	
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
