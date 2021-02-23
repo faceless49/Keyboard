@@ -1,12 +1,16 @@
 import React from 'react'
+
 import s from './Login.module.scss'
+import UIField from '../../component/UIField/UIField'
+import modal__bg from '../../assets/images/bg.jpg'
+
 import { Formik, Field, Form } from 'formik'
 import * as Yup from 'yup'
 import { useDispatch, useSelector } from 'react-redux'
 import { StateType } from '../../redux/store'
 import { Redirect } from 'react-router-dom'
 import { googleSignInTC, loginTC } from '../../redux/reducers/AuthReducer'
-import UIField from '../../component/UIField/UIField'
+
 
 
 export const Login: React.FC = () => {
@@ -26,9 +30,10 @@ export const Login: React.FC = () => {
 	if (isAuth) return <Redirect to={'/interviews'} />
 
 	return (
-		<div className={s.authentication}>
-			<div className={s.authenticationCard}>
-				<h2 className={s.authenticationTitle}>Авторизация</h2>
+		<div className={s.modal}>
+			<img className={s.modal__img} src={modal__bg} alt="#"/>
+			<div className={s.modal__body}>
+				<h2 className={s.modal__title}>login</h2>
 				<Formik
 					initialValues={{
 						email: email,
@@ -46,7 +51,7 @@ export const Login: React.FC = () => {
 					}}
 				>
 					{({ errors, touched, isSubmitting, isValid, dirty, status }) => (
-						<Form className={s.authenticationForm}>
+						<Form className={s.modal__form}>
 							<UIField
 								title={'Введите Email'}
 								errors={errors}

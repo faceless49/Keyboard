@@ -1,5 +1,5 @@
 import React from 'react'
-import { keySets } from '../../../accets/KeysArrays'
+import { keySets } from '../../../assets/KeysArrays'
 import s from './Ketboard.module.css'
 import { Button } from './KeyBoardButton'
 

@@ -1,20 +1,37 @@
-.fieldLabel{
+@import "../../sass/base/fonts";
+@import "../../sass/abstracts/variable/variable";
+@import "../../sass/abstracts/mixins/mixins";
+@import "../../sass/abstracts/elements/elements";
+
+.Label{
 	display: block;
 	margin-bottom: 10px;
 }
 
 
-.field{
+.Label__row{
 	width: 100%;
-	display: flex;
-	justify-content: space-between;
+	text-align: center;
 }
 
-.inputField{
-	width: 65%;
+.Label__text{
+	font-size: 18px;
+	font-family: "Ubuntu";
+	color:$main_color;
+}
+
+.Label__input{
+	@include wh(80%,40px);
+
+	text-indent: 25px;
+	color:$main_color;
+	font-family: "Ubuntu";
+	background-color: rgba(100, 98, 98, 0.5);
+	box-shadow: none;
 }
 
 .error{
+	font-size: 14px;
 	color: red;
 	font-weight: bold;
 }

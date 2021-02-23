@@ -1,0 +1,10 @@
+@mixin wh($w, $h) {
+	width: $w;
+	height: $h;
+}
+
+@mixin flex-j-a($value,$value1){
+	display: flex;
+	justify-content: $value;
+	align-items: $value1;
+}

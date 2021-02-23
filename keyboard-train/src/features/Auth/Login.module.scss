@@ -1,16 +1,45 @@
-.authentication{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+@import "../../sass/base/fonts";
+@import "../../sass/abstracts/variable/variable";
+@import "../../sass/abstracts/mixins/mixins";
+@import "../../sass/abstracts/elements/elements";
+
+.modal{
+	height: 100%;
+	@extend %flexCenter;
+	@extend %pos-rel;
 }
 
-.authenticationCard{
+.modal__img{
+	@include wh(100%,100%);
+
+	@extend %pos-abs;
+
+	object-fit: cover;
+	object-position: center;
+	filter: blur(5px);
+}
+
+.modal__body{
 	max-width: 400px;
 	width: 100%;
-	border: 1px solid grey;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	padding: 10px;
+	border: 1px solid rgb(255, 255, 255);
+	z-index: 100;
+}
+
+.modal__title{
+	margin: 50px 0;
+	font-size: 25px;
+	font-family: "Ubuntu";
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.modal__form{
+	display: flex;
+	flex-direction: column;
+	border: 1px solid rgb(255, 255, 255);
 }
 
 .btnsGroup{
@@ -25,8 +54,9 @@
 	padding: 10px 15px;
 	border: none;
 	border-radius: 7px;
-	color: white;
-	cursor: pointer;	
+	font-family: "Ubuntu";
+	color: $main_color;
+	cursor: pointer;
 }
 
 button:disabled,

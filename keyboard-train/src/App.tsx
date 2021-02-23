@@ -25,11 +25,11 @@ export const App = () => {
 
 	return (
 		<div className={s.app}>
-			<div className={s.app_container}>
+			<div className={s.app__container}>
 				<>
 					<Menu />
 				</>
-				<div className={s.content_container}>
+				<div className={s.content__container}>
 					<Header />
 					<Switch>
 						<Route path={'/train/:category'} render={() => <Layout />} />
