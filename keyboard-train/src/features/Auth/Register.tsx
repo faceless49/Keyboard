@@ -1,5 +1,6 @@
 import React from 'react'
 import { Formik, Form } from 'formik'
+import s from './Login.module.scss'
 import * as Yup from 'yup'
 import { useDispatch } from 'react-redux'
 import { registerTC } from '../../redux/reducers/AuthReducer'
@@ -17,9 +18,9 @@ export const Register: React.FC = () => {
 	})
 
 	return (
-		<div className={'authentication'}>
-			<div className={'authentication-card'}>
-				<h2 className={'authentication-title'}>Регистрация</h2>
+		<div className={s.authentication}>
+			<div className={s.authenticationCard}>
+				<h2 className={s.authenticationTitle}>Регистрация</h2>
 				<Formik
 					initialValues={{
 						email: '',

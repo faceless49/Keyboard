@@ -1,5 +1,5 @@
 import React from 'react'
-import './Login.css'
+import s from './Login.module.scss'
 import { Formik, Field, Form } from 'formik'
 import * as Yup from 'yup'
 import { useDispatch, useSelector } from 'react-redux'
@@ -26,9 +26,9 @@ export const Login: React.FC = () => {
 	if (isAuth) return <Redirect to={'/interviews'} />
 
 	return (
-		<div className={'authentication'}>
-			<div className={'authentication-card'}>
-				<h2 className={'authentication-title'}>Авторизация</h2>
+		<div className={s.authentication}>
+			<div className={s.authenticationCard}>
+				<h2 className={s.authenticationTitle}>Авторизация</h2>
 				<Formik
 					initialValues={{
 						email: email,
@@ -46,7 +46,7 @@ export const Login: React.FC = () => {
 					}}
 				>
 					{({ errors, touched, isSubmitting, isValid, dirty, status }) => (
-						<Form className="authentication-form">
+						<Form className={s.authenticationForm}>
 							<UIField
 								title={'Введите Email'}
 								errors={errors}
@@ -68,17 +68,17 @@ export const Login: React.FC = () => {
 								name={'checked'}
 								type={'checkbox'}
 							/>
-							<div className="btns-group">
+							<div className={s.btnsGroup}>
 								<button
 									type="submit"
-									className="btn"
+									className={s.btn}
 									//disabled={(!isValid || !dirty) || isSubmitting}
 								>
 									Отправить
 								</button>
 							</div>
 							{status && (
-								<div className="error">{status}</div>
+								<div className={s.error}>{status}</div>
 							)}
 						</Form>
 					)}

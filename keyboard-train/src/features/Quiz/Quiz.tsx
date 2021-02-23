@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import s from './Quiz.module.css'
+import s from './Quiz.module.scss'
 
 export const Quiz = () => {
 

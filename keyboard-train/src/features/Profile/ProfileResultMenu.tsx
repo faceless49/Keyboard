@@ -1,4 +1,4 @@
-import s from "./Profile.module.css";
+import s from "./Profile.module.scss";
 import React, {useState} from "react";
 
 type ProfileResultMenuPropsType = {
