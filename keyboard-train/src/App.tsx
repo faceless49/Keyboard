@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Route, Switch } from 'react-router-dom'
-import './App.css'
+import s from './App.module.scss'
 import { Login } from './features/Auth/Login'
 import { Register } from './features/Auth/Register'
 import { Header } from './features/Header/Header'
@@ -24,12 +24,12 @@ export const App = () => {
 	}, [dispatch, isAuth])
 
 	return (
-		<div className='app'>
-			<div className={'app_container'}>
+		<div className={s.app}>
+			<div className={s.app_container}>
 				<>
 					<Menu />
 				</>
-				<div className={'content_container'}>
+				<div className={s.content_container}>
 					<Header />
 					<Switch>
 						<Route path={'/train/:category'} render={() => <Layout />} />
