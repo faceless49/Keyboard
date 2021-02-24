@@ -55,6 +55,7 @@ export const Login: React.FC = () => {
 					{({ errors, touched, isSubmitting, isValid, dirty, status }) => (
 						<Form className={s.modal__form}>
 							<UIField
+								className={`${s.Label__input}`}
 								title={'Введите Email'}
 								errors={errors}
 								touched={touched}
@@ -62,6 +63,7 @@ export const Login: React.FC = () => {
 								type={'email'}
 							/>
 							<UIField
+								className={s.Label__input}
 								title={'Введите пароль'}
 								errors={errors}
 								touched={touched}
@@ -69,6 +71,7 @@ export const Login: React.FC = () => {
 								type={'password'}
 							/>
 							<UIField
+								className={s.Label__input}
 								title={'Запомнить меня'}
 								errors={errors}
 								touched={touched}

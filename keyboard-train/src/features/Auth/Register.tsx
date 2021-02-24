@@ -36,18 +36,20 @@ export const Register: React.FC = () => {
 					{({ errors, touched, isSubmitting, isValid, dirty }) => (
 						<Form className="authentication-form">
 							<UIField
-									title={'Введите Email'}
-									errors={errors}
-									touched={touched}
-									name={'email'}
-									type={'email'}
+								className={`${s.Label__input}`}
+								title={'Введите Email'}
+								errors={errors}
+								touched={touched}
+								name={'email'}
+								type={'email'}
 							/>
 							<UIField
-									title={'Введите пароль'}
-									errors={errors}
-									touched={touched}
-									name={'password'}
-									type={'password'}
+								className={`${s.Label__input}`}
+								title={'Введите пароль'}
+								errors={errors}
+								touched={touched}
+								name={'password'}
+								type={'password'}
 							/>
 							<div className="btns-group">
 								<button 

@@ -8,21 +8,22 @@ type FieldProps = {
 	title: string
 	name: string
 	type: string
+	className: string
 }
 
-const UIField = ({errors, touched, title, name, type}: FieldProps) => {
+const UIField = (props: FieldProps) => {
 	return (
 		<label className={s.Label}>
 			<div className={s.Label__row } >
-				<p className={s.Label__text}>{title}</p>
+				<p className={s.Label__text}>{props.title}</p>
 				<Field
-					className={s.Label__input}
-					name={name}
-					type={type}
+					className={props.className}
+					name={props.name}
+					type={props.type}
 				/>
 			</div>
-			{errors[name] && touched[name] ? (
-				<div className={s.error}>{errors[name]}</div>
+			{props.errors[props.name] && props.touched[props.name] ? (
+				<div className={s.error}>{props.errors[props.name]}</div>
 			) : null}
 		</label>
 	)

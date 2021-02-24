@@ -7,14 +7,14 @@ type BthProps = {
 }
 
 
-const Btn = ({text}:BthProps) => {
+const Btn = (props:BthProps) => {
 	return (
 		<button
 			className={s.btn}
 			type={'submit'}
 		//disabled={(!isValid || !dirty) || isSubmitting}
 		>
-			{text}
+			{props.text}
 		</button>
 	)
 }

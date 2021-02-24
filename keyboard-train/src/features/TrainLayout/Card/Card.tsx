@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import s from './../../../App.module.css'
+import s from './../../../App.module.scss'
 import * as Yup from 'yup'
 import { Formik, Field, Form } from 'formik'
 import UIField from '../../../component/UIField/UIField'
@@ -61,6 +61,7 @@ export const Card = () => {
 					{({ errors, touched, isSubmitting, isValid, dirty }) => {
 						return <Form className='authentication-form'>
 							<UIField
+								className={`${s.Label__input}`}
 								title={'Введите имя'}
 								errors={errors}
 								touched={touched}
@@ -68,6 +69,7 @@ export const Card = () => {
 								type={'text'}
 							/>
 							<UIField
+								className={`${s.Label__input}`}
 								title={'Введите описание'}
 								errors={errors}
 								touched={touched}

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import s from './Results.module.css'
+import s from './Results.module.scss'
 
 type TimerPropsType = {
 	isActiveTimer: boolean

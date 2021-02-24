@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { Results } from '../Results/Results'
-import s from './CheckField.module.css'
+import s from './CheckField.module.scss'
 
 type CheckFieldType = {
 	keyCount: number

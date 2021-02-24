@@ -1,0 +1,73 @@
+@import "../../../sass/abstracts/elements/elements";
+
+.keyboard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__rows {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 30px;
+    border-radius: 50px;
+    background-color: #424242;
+  }
+
+  &__rowFirst {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(13, 1fr) 2fr;
+    gap: 10px;
+  }
+  &__rowSecond {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1.8fr repeat(12, 1fr) 1.2fr;
+    gap: 10px;
+  }
+  &__rowThird {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2.2fr repeat(11, 1fr) 1.8fr;
+    gap: 10px;
+  }
+  &__rowFourth {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2.5fr repeat(10, 1fr) 2.5fr;
+    gap: 10px;
+  }
+  &__rowLast {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1.5fr 1fr 1.5fr 7fr 1.5fr 1fr 1.5fr;
+    gap: 10px;
+  }
+  &__button {
+    @extend %flexCenter;
+    color: #e0e0e0;
+    border: solid 1px #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    background-color: #616161;
+    transition: all 300ms ease;
+    font-size: 20px;
+    &:first-child,
+    &:last-child {
+      background-color: #9370db;
+    }
+  }
+}
+
+.nextButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 70px;
+  height: 65px;
+  margin: 2px;
+  background-color: #3f6c45;
+}

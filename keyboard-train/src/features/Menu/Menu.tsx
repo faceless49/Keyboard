@@ -22,9 +22,7 @@ export const Menu = () => {
 			<div className={s.container}>
 				<div>
 					<NavLink to='/' className={s.link}>
-						<div className={s.logo}>
-							Typing and learn js
-						</div>
+							<h3 className={s.menu__title}>Typing and learn js</h3>
 					</NavLink>
 				</div>
 				<div>
