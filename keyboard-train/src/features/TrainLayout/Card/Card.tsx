@@ -61,7 +61,8 @@ export const Card = () => {
 					{({ errors, touched, isSubmitting, isValid, dirty }) => {
 						return <Form className='authentication-form'>
 							<UIField
-								className={`${s.Label__input}`}
+								labelClassName={`${s.Label__row}`}
+								inputClassName={`${s.Label__input}`}
 								title={'Введите имя'}
 								errors={errors}
 								touched={touched}
@@ -69,7 +70,8 @@ export const Card = () => {
 								type={'text'}
 							/>
 							<UIField
-								className={`${s.Label__input}`}
+								labelClassName={`${s.Label__row}`}
+								inputClassName={`${s.Label__input}`}
 								title={'Введите описание'}
 								errors={errors}
 								touched={touched}

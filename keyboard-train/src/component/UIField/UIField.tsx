@@ -8,16 +8,17 @@ type FieldProps = {
 	title: string
 	name: string
 	type: string
-	className: string
+	inputClassName: string
+	labelClassName: string
 }
 
 const UIField = (props: FieldProps) => {
 	return (
 		<label className={s.Label}>
-			<div className={s.Label__row } >
+			<div className={props.labelClassName} >
 				<p className={s.Label__text}>{props.title}</p>
-				<Field
-					className={props.className}
+				<Field 
+					className={props.inputClassName}
 					name={props.name}
 					type={props.type}
 				/>

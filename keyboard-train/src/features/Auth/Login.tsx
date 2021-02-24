@@ -1,6 +1,7 @@
 import React from 'react'
 
 import s from './Login.module.scss'
+import b from '../../component/UIField.module.scss';
 import UIField from '../../component/UIField/UIField'
 import modal__bg from '../../assets/images/bg.jpg'
 import Btn from '../../component/Btn/Btn'
@@ -55,7 +56,8 @@ export const Login: React.FC = () => {
 					{({ errors, touched, isSubmitting, isValid, dirty, status }) => (
 						<Form className={s.modal__form}>
 							<UIField
-								className={`${s.Label__input}`}
+								labelClassName={`${s.Label__row}`}
+								inputClassName={`${s.Label__input}`}
 								title={'Введите Email'}
 								errors={errors}
 								touched={touched}
@@ -63,7 +65,8 @@ export const Login: React.FC = () => {
 								type={'email'}
 							/>
 							<UIField
-								className={s.Label__input}
+								labelClassName={`${s.Label__row}`}
+								inputClassName={`${s.Label__input}`}
 								title={'Введите пароль'}
 								errors={errors}
 								touched={touched}
@@ -71,7 +74,8 @@ export const Login: React.FC = () => {
 								type={'password'}
 							/>
 							<UIField
-								className={s.Label__input}
+								labelClassName={`${s.Label__row}`}
+								inputClassName={`${s.Label__input}`}
 								title={'Запомнить меня'}
 								errors={errors}
 								touched={touched}

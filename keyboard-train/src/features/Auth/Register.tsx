@@ -36,7 +36,8 @@ export const Register: React.FC = () => {
 					{({ errors, touched, isSubmitting, isValid, dirty }) => (
 						<Form className="authentication-form">
 							<UIField
-								className={`${s.Label__input}`}
+								labelClassName={`${s.Label__row}`}
+								inputClassName={`${s.Label__input}`}
 								title={'Введите Email'}
 								errors={errors}
 								touched={touched}
@@ -44,7 +45,8 @@ export const Register: React.FC = () => {
 								type={'email'}
 							/>
 							<UIField
-								className={`${s.Label__input}`}
+								labelClassName={`${s.Label__row}`}
+								inputClassName={`${s.Label__input}`}
 								title={'Введите пароль'}
 								errors={errors}
 								touched={touched}

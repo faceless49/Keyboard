@@ -5,16 +5,18 @@
 
 .Label{
 	display: block;
-	margin-bottom: 10px;
-
 	&__row{
 		width: 100%;
 		text-align: center;
 	}
 
 	&__text{
+		margin: 40px 0;
 		@include font(20px,'Ubuntu',$main_color,center);
 		@include neostyle(rgb(10, 255, 255));
+		&:last-child{
+			margin: 0 0;
+		}
 	}
 
 	&__input{
