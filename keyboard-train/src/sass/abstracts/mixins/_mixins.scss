@@ -8,3 +8,9 @@
 	justify-content: $value;
 	align-items: $value1;
 }
+
+@mixin flexcenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

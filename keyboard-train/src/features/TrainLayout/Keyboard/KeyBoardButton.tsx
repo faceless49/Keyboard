@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './Ketboard.module.css'
+import s from './Keyboard.module.scss'
 
 type ButtonPropsType = {
 	keyCount: number

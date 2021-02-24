@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import s from './TrainLayout.module.css'
+import s from './TrainLayout.module.scss'
 
 import { CheckField } from './CheckField/CheckField'
 import { KeyBoard } from './Keyboard/Keyboard'

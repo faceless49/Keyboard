@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import s from './../../../App.module.css'
+import s from './../../../App.module.scss'
 import * as Yup from 'yup'
 import { Formik, Field, Form } from 'formik'
 import UIField from '../../../component/UIField/UIField'
