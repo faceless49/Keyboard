@@ -6,32 +6,39 @@
 .Label{
 	display: block;
 	margin-bottom: 10px;
-}
 
+	&__row{
+		width: 100%;
+		text-align: center;
+	}
 
-.Label__row{
-	width: 100%;
-	text-align: center;
-}
+	&__text{
+		@include font(20px,'Ubuntu',$main_color,center);
+		@include neostyle(rgb(10, 255, 255));
+	}
 
-.Label__text{
-	font-size: 18px;
-	font-family: "Ubuntu";
-	color:$main_color;
-}
+	&__input{
+		@include wh(80%,40px);
+	
+		@include font(18px,'Ubuntu',$main_color);
+		@include neostyle(rgb(10, 255, 255));
+		text-indent: 25px;
+		letter-spacing: 2.8px;
 
-.Label__input{
-	@include wh(80%,40px);
-
-	text-indent: 25px;
-	color:$main_color;
-	font-family: "Ubuntu";
-	background-color: rgba(100, 98, 98, 0.5);
-	box-shadow: none;
+		background-color: rgba(100, 98, 98, 0.5);
+		box-shadow: none;
+		border-radius: 5px;
+		border: none;
+	}
+	&__rowCheckbox{
+		display: flex;
+	}
+	
 }
 
 .error{
-	font-size: 14px;
-	color: red;
-	font-weight: bold;
+	margin-top: 10px;
+
+	@include font(14px,'Ubuntu',red,center);
+	text-shadow: 0 0 3px red;
 }

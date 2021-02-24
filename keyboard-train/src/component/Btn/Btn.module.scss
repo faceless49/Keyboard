@@ -1,0 +1,30 @@
+@import "../../sass/base/fonts";
+@import "../../sass/abstracts/variable/variable";
+@import "../../sass/abstracts/mixins/mixins";
+@import "../../sass/abstracts/elements/elements";
+
+
+.btn{
+	@include wh(80%,40px);
+	margin: 0 auto;
+
+	@include font(18px,'Ubuntu',$main_color,center);
+	@include neostyle(rgb(10, 255, 255));
+
+	background-color: rgba(39, 15, 105, 0.699);
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition:background-color 500ms ease ;
+
+	&:hover{
+		background-color: rgba(182, 26, 26, 0.795);
+	}
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}

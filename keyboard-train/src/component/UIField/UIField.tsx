@@ -13,7 +13,7 @@ type FieldProps = {
 const UIField = ({errors, touched, title, name, type}: FieldProps) => {
 	return (
 		<label className={s.Label}>
-			<div className={s.Label__row}>
+			<div className={s.Label__row } >
 				<p className={s.Label__text}>{title}</p>
 				<Field
 					className={s.Label__input}

@@ -8,3 +8,16 @@
 	justify-content: $value;
 	align-items: $value1;
 }
+
+@mixin font($font-size,$font-family,$color,$text-align:left){
+	font-size:$font-size ;
+	font-family: $font-family;
+	text-align: $text-align;
+	color:$color;
+}
+
+@mixin neostyle($color:rgb(51, 255, 0)){
+	
+	text-shadow: 0 0 4px $color;
+}
+

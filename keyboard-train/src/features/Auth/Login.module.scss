@@ -7,61 +7,41 @@
 	height: 100%;
 	@extend %flexCenter;
 	@extend %pos-rel;
+
+	&__img{
+		@include wh(100%,100%);
+
+		@extend %pos-abs;
+	
+		object-fit: cover;
+		object-position: center;
+		filter: blur(4px);
+	}
+
+	&__body{
+		max-width: 400px;
+		width: 100%;
+		padding: 10px;
+		z-index: 100;
+		border-radius: 15px;
+		background-color: rgba(35, 26, 44, 0.5);
+	}
+
+	&__title{
+		margin: 50px 0 25px 0;
+
+		@include font(30px,'Ubuntu',$main_color,center);
+		@include neostyle();
+		letter-spacing: 3.8px;
+
+		text-transform: uppercase;
+	}
+
+	&__form{
+		display: flex;
+		flex-direction: column;
+	}
+
 }
 
-.modal__img{
-	@include wh(100%,100%);
 
-	@extend %pos-abs;
-
-	object-fit: cover;
-	object-position: center;
-	filter: blur(5px);
-}
-
-.modal__body{
-	max-width: 400px;
-	width: 100%;
-	padding: 10px;
-	border: 1px solid rgb(255, 255, 255);
-	z-index: 100;
-}
-
-.modal__title{
-	margin: 50px 0;
-	font-size: 25px;
-	font-family: "Ubuntu";
-	text-align: center;
-	color: #fff;
-	text-transform: uppercase;
-}
-
-.modal__form{
-	display: flex;
-	flex-direction: column;
-	border: 1px solid rgb(255, 255, 255);
-}
-
-.btnsGroup{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-}
-
-.btn{
-	background-color: tomato;
-	padding: 10px 15px;
-	border: none;
-	border-radius: 7px;
-	font-family: "Ubuntu";
-	color: $main_color;
-	cursor: pointer;
-}
-
-button:disabled,
-button[disabled]{
-  border: 1px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
-}

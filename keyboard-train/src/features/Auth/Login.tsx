@@ -3,6 +3,8 @@ import React from 'react'
 import s from './Login.module.scss'
 import UIField from '../../component/UIField/UIField'
 import modal__bg from '../../assets/images/bg.jpg'
+import Btn from '../../component/Btn/Btn'
+
 
 import { Formik, Field, Form } from 'formik'
 import * as Yup from 'yup'
@@ -73,15 +75,9 @@ export const Login: React.FC = () => {
 								name={'checked'}
 								type={'checkbox'}
 							/>
-							<div className={s.btnsGroup}>
-								<button
-									type="submit"
-									className={s.btn}
-									//disabled={(!isValid || !dirty) || isSubmitting}
-								>
-									Отправить
-								</button>
-							</div>
+							<Btn
+								text={'Отправить'}
+							/>
 							{status && (
 								<div className={s.error}>{status}</div>
 							)}
