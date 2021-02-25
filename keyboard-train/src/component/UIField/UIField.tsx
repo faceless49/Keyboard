@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './UIField.module.scss';
+
 import { Field } from 'formik'
 
 type FieldProps = {
@@ -13,9 +14,12 @@ type FieldProps = {
 }
 
 const UIField = (props: FieldProps) => {
+	const labelClass = props.labelClassName
+	
+	
 	return (
 		<label className={s.Label}>
-			<div className={props.labelClassName} >
+			<div className={labelClass} >
 				<p className={s.Label__text}>{props.title}</p>
 				<Field 
 					className={props.inputClassName}
